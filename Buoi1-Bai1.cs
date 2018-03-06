@@ -13,10 +13,8 @@ namespace ConsoleApplication1
             String strHostName = Dns.GetHostName();
             Console.WriteLine("Host Name: " + strHostName);
 
-            // Find host by name
             IPHostEntry iphostentry = Dns.GetHostByName(strHostName);
 
-            // Enumerate IP addresses
             int nIP = 0;
             foreach (IPAddress ipaddress in iphostentry.AddressList)
             {
